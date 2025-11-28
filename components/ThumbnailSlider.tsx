@@ -72,10 +72,9 @@ const ThumbnailSlider = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 3,
     slidesToScroll: 1,
     focusOnSelect: true,
-    centerMode: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -84,7 +83,7 @@ const ThumbnailSlider = () => {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 600,
         settings: {
           slidesToShow: 3,
         },
@@ -109,7 +108,7 @@ const ThumbnailSlider = () => {
         <Slider ref={mainSliderRef} {...mainSettings}>
           {images.map((src, index) => (
             <div key={`main-${src}`} className="px-2">
-              <div className="relative w-full h-[500px] overflow-hidden rounded-lg bg-gray-100">
+              <div className="relative w-full h-[200px] md:h-[500px] overflow-hidden rounded-lg bg-gray-100">
                 <Image
                   src={src}
                   alt={`main image ${index + 1}`}
@@ -125,7 +124,7 @@ const ThumbnailSlider = () => {
               
         <Link
           href="/view360"
-          className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-60 hover:bg-opacity-80 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-2 shadow-lg"
+          className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-60 hover:bg-opacity-80 text-white px-2 py-1 md:px-6 md:py-2.5 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-2 shadow-lg"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

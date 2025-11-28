@@ -78,11 +78,11 @@ export default function Image360Viewer() {
   }, []);
 
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center bg-gray-100">
+    <div className="w-full flex flex-col justify-center items-center">
       <div className="w-[950px] max-w-[90vw] bg-white rounded-lg shadow-lg p-4">
         <div
           ref={containerRef}
-          className={`relative w-full h-[550px] overflow-hidden rounded-lg ${
+          className={`relative w-full h-[280px] md:h-[550px] overflow-hidden rounded-lg ${
             isDragging ? "cursor-grabbing" : "cursor-grab"
           }`}
           onMouseDown={handleMouseDown}
